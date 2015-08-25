@@ -7,11 +7,20 @@
     <script>
       var myFirebaseRef = new Firebase("https://roomavix.firebaseio.com/web/saving-data/mix1");
       
+      /* Reading data
       myFirebaseRef.on("value", function(snapshot) {
       console.log(snapshot.val());
     }, function (errorObject) {
       console.log("The read failed: " + errorObject.code);
     });
+      */
+      
+      myFirebaseRef.set({
+        alanisawesome: {
+        date_of_birth: "June 23, 1912",
+        full_name: "Alan Turing"
+        }
+      }
     </script>
   </body>
 </html>
