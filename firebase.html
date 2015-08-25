@@ -7,7 +7,7 @@
     <script>
       var myFirebaseRef = new Firebase("https://roomavix.firebaseio.com/web/saving-data/mix1");
       
-      ref.on("value", function(snapshot) {
+      myFirebaseRef.on("value", function(snapshot) {
       console.log(snapshot.val());
     }, function (errorObject) {
       console.log("The read failed: " + errorObject.code);
