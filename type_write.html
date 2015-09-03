@@ -17,10 +17,10 @@ var str = "<p>This is my <span style='color:red;'>special string</span> with an 
     text = str.slice(0, ++i);
     if (text === str) return;
     
-    document.getElementById('typewriter').innerHTML = text;
-
     if(mcx++ % 7 == 0)
-        document.getElementById('typewriter').innerHTML += "<b>_</b>";
+        document.getElementById('typewriter').innerHTML = text + "<b>_</b>";
+    else
+        document.getElementById('typewriter').innerHTML = text ;
 
     var char = text.slice(-1);
     if( char === '<' ) isTag = true;
