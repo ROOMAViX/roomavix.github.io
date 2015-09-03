@@ -10,13 +10,17 @@
 var str = "<p>This is my <span style='color:red;'>special string</span> with an image !</p>",
     i = 0,
     isTag,
-    text;
+    text,
+    mcx = 0;
 
 (function type() {
     text = str.slice(0, ++i);
     if (text === str) return;
+    
+    document.getElementById('typewriter').innerHTML = text;
 
-    document.getElementById('typewriter').innerHTML = text + "<b>_</b>";
+    if(mcx++ % 2 == 0)
+        document.getElementById('typewriter').innerHTML += "<b>_</b>";
 
     var char = text.slice(-1);
     if( char === '<' ) isTag = true;
