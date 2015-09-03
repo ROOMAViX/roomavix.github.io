@@ -19,7 +19,7 @@ var str = "<p>This is my <span style='color:red;'>special string</span> with an 
     
     document.getElementById('typewriter').innerHTML = text;
 
-    if(mcx++ % 2 == 0)
+    if(mcx++ % 7 == 0)
         document.getElementById('typewriter').innerHTML += "<b>_</b>";
 
     var char = text.slice(-1);
