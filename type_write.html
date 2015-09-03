@@ -16,7 +16,7 @@ var str = "<p>This is my <span style='color:red;'>special string</span> with an 
     text = str.slice(0, ++i);
     if (text === str) return;
 
-    document.getElementById('typewriter').innerHTML = text + "_";
+    document.getElementById('typewriter').innerHTML = text + "<b>_</b>";
 
     var char = text.slice(-1);
     if( char === '<' ) isTag = true;
